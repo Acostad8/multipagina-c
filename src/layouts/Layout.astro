@@ -1,5 +1,6 @@
 ---
-const { title = 'Te olvidaste del titulo', msf = 'Hola mundo cruel' } = Astro.props;
+const { title = "Te olvidaste del titulo", msf = "Hola mundo cruel" } =
+	Astro.props;
 ---
 
 <!doctype html>
@@ -13,28 +14,41 @@ const { title = 'Te olvidaste del titulo', msf = 'Hola mundo cruel' } = Astro.pr
 		<title>{title}</title>
 	</head>
 	<body>
-		<header class="h-20 bg-orange-400 ">
-		</header>
-		
-		<menu class="bg-blue-500 flex ">
+		<header class="h-20 bg-orange-400"></header>
+
+		<menu class="bg-blue-500 flex">
 			<li>
 				<a href="/" class="hover:bg-white/25 px-2 block">Inicio</a>
 			</li>
 			<li>
-				<a href="/quienes-somos" class="hover:bg-white/25 px-2 block">Quienes Somos</a>
+				<a href="/quienes-somos" class="hover:bg-white/25 px-2 block"
+					>Quienes Somos</a
+				>
 			</li>
 			<li>
-				<a href="/organigrama" class="hover:bg-white/25 px-2 block">Organigrama</a>
+				<a href="/organigrama" class="hover:bg-white/25 px-2 block"
+					>Organigrama</a
+				>
 			</li>
 			<li>
-				<a href="/contacto" class="hover:bg-white/25 px-2 block">Contacto</a>
+				<a href="/contacto" class="hover:bg-white/25 px-2 block"
+					>Contacto</a
+				>
 			</li>
 		</menu>
-		
-		
-		<p>Tu mensaje es: {msf}</p>
-		
-		<slot />
 
+		<p>Tu mensaje es: {msf}</p>
+
+		<slot />
 	</body>
+
+	<style is:global>
+		@font-face {
+			font-family: "myfont";
+			src: url("/fonts/Itim-Regular.ttf");
+			font-weight: normal;
+			font-style: normal;
+			font-display: swap;
+		}
+	</style>
 </html>
